@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kotlin</title>
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" sizes="32x32" href="static/kotlin.ico">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <span class="logo">
+                <a href="index.html"><img src="static/logo.png"/></a>
+            </span>
+            <span class="tagline">
+                <p>A modern programming language that makes developers happier.</p>
+            </span>
+            <hr>
+        </header>
+
+        <h1>What is Kotlin?</h1>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xT8oP0wy-A0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="text-block">
+            <p>Kotlin is a language developed for the Java Virtual Machine by IntelliJ,
+                the makers of IDEA. Named for an island in the Baltic sea,  it aims to be
+                better than Java! Google announced in 2019 that Kotlin would be
+                the preferred language for Android application development.
+                Although Kotlin typically complies to Java bytecode, it is also
+                commonly compiled to JavaScript and machine code
+                (for mobile processors).</p>
+            <p>Kotlin is an open-source language that features statically-typed
+                variables (i.e., you don’t need to explicitly declare them).
+                Variables can be declared read only or mutable. In Kotlin,
+                semicolons are optional, at least most of the time… And, of course,
+                Kotlin is object-oriented and prominently features the functional
+                paradigm.</p>
+        </div>
+
+        <h1>Developing in Kotlin</h1>
+        <div class="text-block">
+            <h2>Kotlin Specification</h2>
+            <p><a href="https://github.com/JetBrains/kotlin">Kotlin's Github Page</a></p>
+            <p><a href="https://kotlinlang.org/spec/introduction.html">Official Kotlin Language Specification and Grammar</a></p>
+
+            <h2>Manuals/Documentation</h2>
+            <p><a href="https://kotlinlang.org/docs/home.html">Kotlin Documentation Website</a></p>
+            <p><a href="https://kotlinlang.org/docs/kotlin-reference.pdf">Kotlin Documentation (PDF)</a></p>
+
+            <h2>Tutorials</h2>
+            <p><b><i><a href="https://www.riptutorial.com/Download/kotlin.pdf">Learning Kotlin</a></i></b>, from Stack Overflow contributors</p>
+            <p><b><i><a href="https://www.youtube.com/watch?v=k9K71QkrHGE&list=PLrnPJCHvNZuAIbejjZA1kGfLeA8ZpICB2">Kotlin Course for Beginners and Java Devs</a></i></b>, from Coding in Flow's YouTube channel</p>
+
+            <h2>Online Interactive Shell</h2>
+                <p>Kotlin provides an <a href="https://play.kotlinlang.org/">interactive shell</a>
+                    where you can write Kotlin code and run it all in your browser.
+                    This is great for learning the basic syntax of Kotlin.</p>
+
+            <h2>IDEs for Kotlin</h2>
+            <p>Here are a couple of IDEs for writing Kotlin code:</p>
+            <div class="icon-group">
+                <a href="https://developer.android.com/studio"><img src="static/android_studio.png" class="icon" alt="Android Studio"/></a>
+                <a href="https://www.jetbrains.com/idea/"><img src="static/idea.png" class="icon" alt="IntelliJ Idea"/></a>
+                <a href="https://code.visualstudio.com/"><img src="static/vscode.png" class="icon" alt="Visual Studio Code"/></a>
+                <a href="https://www.eclipse.org/ide/"><img src="static/eclipse.png" class="icon" alt="Eclipse"/></a>
+            </div>
+            <p>These are all great IDEs, but the most preferred IDE to use with
+                Kotlin is <b>IntelliJ IDEA</b>. This is because it has
+                "first-class support" for Kotlin, as well as various project
+                templates, code completion, and refactoring/debugging tools. If
+                you're familiar with Java's debugger and refactoring tools, that
+                is sufficient enough experience to use in Kotlin. Besides, IntelliJ
+                IDEA is made by the same people that made Kotlin!
+            </p>
+
+            <h2>Compiling Kotlin Code</h2>
+            <p>The general way to compile your Kotlin code using <b>IntelliJ IDEA</b>
+                and the <b>Gradle</b> build tool. IDEA already has Kotlin support
+                without needing extra components. If you desire to compile your
+                Kotlin code through the command-line, you can download a Kotlin
+                compiler that's native to your operating system in Kotlin's
+                <b><a href="https://github.com/JetBrains/kotlin/releases/latest">releases</a></b> page.
+            </p>
+            <p>You can see the usage of the native compiler in our code examples below.</p>
+        </div>
+
+        <h1>Code Examples</h1>
+        <!--Hello World -->
+        <h2>Hello World</h2>
+        <div class="code-block">
+<pre class="line-numbers"><code class="language-kotlin">fun main() {
+    println("Hello, World!")
+}</code></pre>
+        </div>
+
+        <h3>Output</h3>
+        <div class="code-block">
+<pre><code class="language-bash">angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ kotlinc-native HelloWorld.kt -o HelloWorld.exe
+
+angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ ./HelloWorld.exe
+
+Hello, World!
+</code></pre>
+        </div>
+
+        <!--Fibonacci Sequence-->
+        <h2>Fibonacci Sequence</h2>
+        <i>Written by: Quinn</i>
+        <p>This code showcases recursion in Kotlin.</p>
+        <div class="code-block">
+<pre class="line-numbers"><code class="language-kotlin">fun foo(x: Int): Int {
+    if (x <=1)
+        return x;
+    return foo(x-1) + foo(x-2);
+}
+
+fun main() {
+    println(foo(7));
+}
+</code></pre>
+        </div>
+        <h3>Output</h3>
+        <div class="code-block">
+<pre><code class="language-bash">angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ kotlinc-native FibonacciSequence.kt -o FibonacciSequence.exe
+
+angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ ./FibonacciSequence.exe
+13</code></pre>
+        </div>
+
+        <!--Temperature-->
+        <h2>Temperature Checker</h2>
+        <i>Written by: Quinn</i>
+        <p>This code showcases conditional statements (if statements) in Kotlin.</p>
+        <div class="code-block">
+<pre class="line-numbers"><code class="language-kotlin">fun main() {
+    val x = 45
+    val s= when (x) {
+        44 -> "too cold"
+        45 -> "just right"
+        46 -> "too hot"
+        else -> "not right"
+    }
+    if (s == "just right") {
+        println(s)
+    } else {
+        println("not quite right")
+    }
+}</code></pre>
+        </div>
+        <h3>Output</h3>
+        <div class="code-block">
+<pre><code class="language-bash">angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ kotlinc-native Temperature.kt -o Temperature.exe
+
+angel@AngelolzPC MINGW64 /f/Desktop/kotlin/
+$ ./Temperature.exe
+
+just right
+</code></pre>
+        </div>
+
+        <!--SumAndDecrease-->
+        <h2>Sum and Decrease</h2>
+        <i>Written by: Angel</i>
+        <p>This code showcases loops (for/while loops) and user input in Kotlin.</p>
+        <div class="code-block">
+<pre class="line-numbers"><code class="language-kotlin">fun main(args: Array&lt;String&gt;) {
+    println(&quot;Program arguments: ${args.joinToString()}&quot;)
+
+    try {
+        var sum = 0;
+        //for loop here
+        for(arg: String in args) {
+            sum += arg.toInt();
+        }
+
+        println(&quot;The total sum is: $sum&quot;)
+        println(&quot;Decreasing sum...&quot;)
+
+        //while loop here
+        while(sum &gt; 0) {
+            sum--
+            println(sum)
+        }
+    }
+
+    catch(e: NumberFormatException) {
+        println(&quot;One or more of your arguments isn't a number.&quot;)
+    }
+}</code></pre>
+        </div>
+        <h3>Output</h3>
+        <div class="code-block">
+<pre><code class="language-bash">angel@AngelolzPC MINGW64 /f/Desktop/kotlin
+$ ./SumAndDecrease.exe 1 2 3 4
+Program arguments: 1, 2, 3, 4
+The total sum is: 10
+Decreasing sum...
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+</code></pre>
+        </div>
+
+        <!--Bank Program-->
+        <h2>Bank Program</h2>
+        <i>Written by: Landon</i>
+        <p>This code showcases object-oriented programming in Kotlin.</p>
+        <div class="code-block">
+<pre class="line-numbers"><code class="language-kotlin">//Account.kt
+abstract class Account(number: Int, cus: Customer, balance:Double) {
+    var accountNumber = 0
+    var customer: Customer? = null
+    var accountBalance = 0.0
+
+    abstract fun accrue(rate: Double)
+
+    fun deposit(amount: Int) {
+        accountBalance+=amount
+    }
+
+    fun withdraw(amount:Int) {
+        accountBalance-=amount
+    }
+
+    override fun toString(): String = accountNumber.toString() +':'+customer+':'+ accountBalance
+}
+
+//CheckingAccount.kt
+class CheckingAccount(number: Int, cus: Customer, balance:Double): Account(number,cus,balance) {
+    init {
+        customer = cus
+        accountNumber = number
+        accountBalance = balance
+    }
+
+    override fun accrue(rate:Double) {}
+}
+
+//SavingAccount.kt
+class SavingsAccount(number: Int, cus: Customer, balance:Double): Account(number,cus,balance) {
+    var interest = 0.0
+
+    init {
+        customer = cus
+        accountNumber = number
+        accountBalance = balance
+        interest = 0.0
+    }
+
+    override fun accrue(rate: Double) {
+        interest+= accountBalance*rate
+		accountBalance+=accountBalance*rate
+    }
+}
+
+//Customer.kt
+class Customer(CustomerName: String) {
+    var c = &quot;&quot;
+    init {
+        c=CustomerName
+    }
+
+    override fun toString(): String = c
+}
+
+//Bank.kt (main class!)
+class Bank() {
+    var hash = HashSet&lt;Account&gt;()
+
+    fun add(acc: Account) {
+        hash.add(acc)
+    }
+
+    fun accrue(newrate: Double){
+        for (i in hash) {
+            i.accrue(newrate)
+        }
+    }
+
+    override fun toString(): String{
+        var returnString = &quot;&quot;
+        for (i in hash) {
+            returnString+= i.toString()+'\n'
+        }
+        return returnString
+    }
+}
+
+fun main() {
+    var bank = Bank()
+    var c = Customer(&quot;Ann&quot;)
+    bank.add(CheckingAccount(1001,c,100.00))
+    bank.add(SavingsAccount(1002,c,200.00))
+    bank.accrue(0.02)
+    println(bank.toString())
+}</code></pre>
+        </div>
+        <h3>Output</h3>
+        <div class="code-block">
+<pre><code class="language-bash">angel@AngelolzPC MINGW64 /f/Desktop/kotlin
+$ kotlinc-native Bank.kt -o Bank.exe
+
+angel@AngelolzPC MINGW64 /f/Desktop/kotlin
+$ ./Bank.exe
+1001:Ann:100.0
+1002:Ann:204.0</code></pre>
+        </div>
+
+
+        <h1>Kotlin vs. Other Languages</h1>
+        <table class="center styled-table">
+            <tr>
+                <th style="width:30%">Features</th>
+                <th>Kotlin</th>
+                <th>Java</th>
+                <th>C</th>
+                <th>Python</th>
+            </tr>
+            <tr>
+                <td>Garbage Collection</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Benefits</td>
+                <td>Very little typing</td>
+                <td>Runs on many platforms</td>
+                <td>Low level access</td>
+                <td>Automation</td>
+            </tr>
+            <tr>
+                <td>Object Oriented or Functional Programming?</td>
+                <td>OO & FP</td>
+                <td>Object Oriented</td>
+                <td>Functional Programming</td>
+                <td>Object Oriented</td>
+            </tr>
+            <tr>
+                <td>Lines needed to implement 2048</td>
+                <td>136 Lines</td>
+                <td>239 Lines</td>
+                <td>250 Lines</td>
+                <td>169 Lines</td>
+            </tr>
+        </table>
+        </div>
+    <script src="js/prism.js"></script>
+    </body>
+</html>

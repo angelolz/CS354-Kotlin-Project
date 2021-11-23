@@ -1,0 +1,178 @@
+/* changes the font for the whole site */
+* {
+    font-family: 'Montserrat', 'Century Gothic', sans-serif;
+}
+
+/* changes font for the code blocks */
+code {
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
+code > span {
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+}
+
+pre[class*=language-] {
+    border-radius: 20px;
+}
+
+body {
+    background: linear-gradient(225deg, rgb(128, 110, 227), rgb(0, 149, 213)) fixed;
+    margin: 0px;
+
+}
+
+header {
+    text-align: center;
+}
+
+hr {
+    height: 3px;
+    background-color: black;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 0.5em;
+}
+
+h3 {
+    line-height: 0.5em;
+}
+
+p {
+    font-size: 20px;
+}
+
+.logo img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/* text right under logo */
+.tagline {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* body of page */
+.content {
+    text-align: center;
+    flex: 1;
+    max-width: 1200px;
+    min-width: 400px;
+    min-height: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: rgb(255,255,255, 0.65);
+    border-radius: 50px;
+}
+
+.text-block {
+    margin: 5px 10%;
+}
+
+.code-block {
+    flex-grow: 1;
+    margin: auto 20% 30px 20%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+/* ide icons */
+.icon-group {
+    margin: 10px;
+    height: auto;
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 64px;
+    -webkit-filter: drop-shadow(3px 3px 2px black);
+            filter: drop-shadow(3px 3px 2px black);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* table stuff */
+.styled-table {
+    border-collapse: collapse;
+    margin: 45px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    max-width: 750px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th {
+    padding: 12px 15px;
+    min-width: 50px;
+}
+
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.styled-table tbody tr {
+    background-color: #ffffff;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.fa-remove {
+  color: red;
+}
+
+/* helper classes */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
